@@ -7,7 +7,7 @@ brew install pagrus7/tap/kaferry
 kaferry --version
 ```
 
-The formula downloads Kaferry's release archive without compiling it. Homebrew verifies its pinned SHA-256 checksum. The installed `share/kaferry` directory contains `LICENSE` and `THIRD_PARTY_NOTICES.txt`. Use the installed release's [documentation](https://github.com/pagrus7/kaferry/releases/latest) for syntax and behavior.
+The formula downloads Kaferry's release archive without compiling it. Homebrew verifies its pinned SHA-256 checksum. The installed `share/kaferry` directory contains `LICENSE` and `THIRD_PARTY_NOTICES.txt`. Run `kaferry --version`, then select the matching release's documentation from the [releases list](https://github.com/pagrus7/kaferry/releases).
 
 ## Updating the formula
 

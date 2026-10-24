@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04
@@ -17,7 +20,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          tag=$(sed -n 's/^  version "\([^"]*\)"/v\1/p' Formula/kaferry.rb)
+          tag=$(python3 -c 'import pathlib, re; print(re.search(r"/releases/download/(v[0-9.]+)/", pathlib.Path("Formula/kaferry.rb").read_text())[1])')
           python3 scripts/update_formula.py "$tag" --check
   install:
     needs: verify

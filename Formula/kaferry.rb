@@ -1,7 +1,6 @@
 class Kaferry < Formula
   desc "Copy Kafka records and Avro archives with SQL"
   homepage "https://github.com/pagrus7/kaferry"
-  version "0.5.0"
   license "MIT"
 
   on_macos do

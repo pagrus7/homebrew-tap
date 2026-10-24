@@ -46,7 +46,7 @@ def formula(tag, commit, hashes):
         blocks += lines + ["  end", ""]
     return '\n'.join([
         "class Kaferry < Formula", '  desc "Copy Kafka records and Avro archives with SQL"',
-        f'  homepage "https://github.com/{REPO}"', f'  version "{tag[1:]}"', '  license "MIT"', "",
+        f'  homepage "https://github.com/{REPO}"', '  license "MIT"', "",
         *blocks, "  def install", '    bin.install "kaferry"',
         '    pkgshare.install "LICENSE", "THIRD_PARTY_NOTICES.txt"', "  end", "", "  test do",
         '    output = shell_output("#{bin}/kaferry --version")',
