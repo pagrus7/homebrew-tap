@@ -5,23 +5,23 @@ class Kaferry < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pagrus7/kaferry/releases/download/v0.5.0/kaferry-v0.5.0-darwin-arm64.tar.gz"
-      sha256 "1a237c4705c7ae14327d47cc4ef517c365e66cbf22ca7fbe0c0b8e047f8f4da5"
+      url "https://github.com/pagrus7/kaferry/releases/download/v0.6.0/kaferry-v0.6.0-darwin-arm64.tar.gz"
+      sha256 "1d1b34c9138577eed67b494715545e37bdca3a99678ce23ae5375a2a65c3b293"
     end
     on_intel do
-      url "https://github.com/pagrus7/kaferry/releases/download/v0.5.0/kaferry-v0.5.0-darwin-amd64.tar.gz"
-      sha256 "b4df81949f518eaf1fa65b808cb35c46b8fee0441ba43d6931e362ef21623b46"
+      url "https://github.com/pagrus7/kaferry/releases/download/v0.6.0/kaferry-v0.6.0-darwin-amd64.tar.gz"
+      sha256 "72d9cc375fe5dcbd1a83ee50444b19ebcbcae2d4c912f5d715f1c7769b5c8385"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/pagrus7/kaferry/releases/download/v0.5.0/kaferry-v0.5.0-linux-arm64.tar.gz"
-      sha256 "6105ab72f82a61a3c4a0c07c46adb57b717b4c4793b9d749abc581ad589196f8"
+      url "https://github.com/pagrus7/kaferry/releases/download/v0.6.0/kaferry-v0.6.0-linux-arm64.tar.gz"
+      sha256 "e79718f78eb5619e51a4505e3a87ddc37c38dd7049292bfe4b6037cbe5102bf2"
     end
     on_intel do
-      url "https://github.com/pagrus7/kaferry/releases/download/v0.5.0/kaferry-v0.5.0-linux-amd64.tar.gz"
-      sha256 "9011c8673b0d58f63616e7346767f3fd150ce713964daa1f78bb683a10a5ea04"
+      url "https://github.com/pagrus7/kaferry/releases/download/v0.6.0/kaferry-v0.6.0-linux-amd64.tar.gz"
+      sha256 "d1ce67ce82f610b479b0458cc7f76b4a6cdb6094f60382d58edcc484ef12670f"
     end
   end
 
@@ -32,7 +32,7 @@ class Kaferry < Formula
 
   test do
     output = shell_output("#{bin}/kaferry --version")
-    assert_match "kaferry v0.5.0 (commit 797cb99495bcffa7eabd5a8e1c0aa3330be66a71; ", output
+    assert_match "kaferry v0.6.0 (commit d7d485b96a52b711cb10d76dca09aa9b155dec5e; ", output
     assert_match "MIT License", (pkgshare/"LICENSE").read
     assert_match "Go runtime and standard library", (pkgshare/"THIRD_PARTY_NOTICES.txt").read
   end
