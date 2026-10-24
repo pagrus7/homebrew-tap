@@ -32,7 +32,8 @@ class Kaferry < Formula
   end
 
   test do
-    assert_match "kaferry v0.5.0 (commit 797cb99495bcffa7eabd5a8e1c0aa3330be66a71; ", shell_output("#{bin}/kaferry --version")
+    output = shell_output("#{bin}/kaferry --version")
+    assert_match "kaferry v0.5.0 (commit 797cb99495bcffa7eabd5a8e1c0aa3330be66a71; ", output
     assert_match "MIT License", (pkgshare/"LICENSE").read
     assert_match "Go runtime and standard library", (pkgshare/"THIRD_PARTY_NOTICES.txt").read
   end
